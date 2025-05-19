@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package pb;
+
+option go_package = "./pb";
+
+message MakeIDServiceRequest {
+    string mode = 1; // ID 生成模式："snowflake" 或 "segment"
+}
+
+message MakeIDServiceResponse {
+    int64 id = 1;
+}
+
+service IDMaker {
+    rpc MakeIDService (MakeIDServiceRequest) returns (MakeIDServiceResponse);
+}
