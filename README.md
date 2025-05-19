@@ -12,7 +12,7 @@
 
 ### BenchMark
 
-- 硬件：8 核 CPU，16GB 内存
+- 硬件：8 核 CPU，32GB 内存
 - MySQL：本地部署，单实例
 - 网络：本地环回，无网络延迟
 
@@ -295,7 +295,7 @@ scrape_configs:
 prometheus --config.file=prometheus.yml
 ```
 
-1. 访问 http://localhost:9090 查看指标：
+1. 访问 http://localhost:9190 查看指标：
 
 * id_generate_total：ID 生成次数。
 * buffer_usage：Buffer 剩余 ID 数量。
